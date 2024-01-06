@@ -14,7 +14,7 @@ jobs:
           run: |
              echo "welcome to the gitaction world :)"
         - name: File modify
-          uses: .
+          uses: ./
           with:
             file_name: deployment.yaml
             yaml_key: image    
