@@ -1,0 +1,25 @@
+name: custom action test
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+    build:
+        name: Display Information 
+        runs-on: ubuntu-latest  
+        steps:
+        - uses: actions/checkout@v3
+        - name: welcome msg
+          run: |
+             echo "welcome to the gitaction world :)"
+        - name: File modify
+          uses: ./
+          with:
+            file_path: "./"
+            file_name: deployment.yaml
+            yaml_key: image    
+            yaml_value: welcome-app:asd45   
+        
+
+        
