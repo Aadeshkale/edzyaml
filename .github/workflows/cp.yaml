@@ -13,6 +13,8 @@ jobs:
         - name: welcome msg
           run: |
              echo "welcome to the gitaction world :)"
+             pwd
+             ls -la
         - name: File modify
           uses: ./
           with:
