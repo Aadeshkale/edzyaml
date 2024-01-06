@@ -19,7 +19,7 @@ jobs:
           uses: ./
           with:
             file_path: test.yaml
-            yaml_key: image    
+            yaml_key: 'spec.template.spec.containers.0.image'    
             yaml_value: welcome-app:asd45   
         
 
