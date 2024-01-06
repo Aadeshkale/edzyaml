@@ -10,11 +10,7 @@ jobs:
         runs-on: ubuntu-latest  
         steps:
         - uses: actions/checkout@v3
-        - name: welcome msg
-          run: |
-             echo "welcome to the gitaction world :)"
-             pwd
-             ls -la
+       
         - name: File modify
           uses: ./
           with:
@@ -22,5 +18,9 @@ jobs:
             yaml_key: 'spec.template.spec.containers.0.image'    
             yaml_value: welcome-app:asd45   
         
-
-        
+        - name: result check
+          run: |
+            echo "welcome to the gitaction world :)"
+            pwd
+            ls -la    
+            cat test.yaml    
