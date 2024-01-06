@@ -4,11 +4,11 @@ import yaml
 
 
 FILE_PATH = os.environ.get("INPUT_FILE_PATH")
-# FILE_NAME = os.environ("FILE_NAME")
+FILE_NAME = os.environ("FILE_NAME")
 YAML_KEY = os.environ.get("INPUT_YAML_KEY") # spec.template.spec.containers.0.image
 YAML_VALUE = os.environ.get("INPUT_YAML_VALUE")
 
-yaml_file = f"{FILE_PATH}"
+yaml_file = f"{FILE_PATH}/{FILE_NAME}"
 data = yaml.safe_load(open(yaml_file, "rb"))
 
 def get_updated_dict(dict_to_update, path, value):
