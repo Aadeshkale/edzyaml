@@ -3,12 +3,12 @@ import yaml
 
 
 
-file_path = os.getenv("file_path")
-file_name = os.getenv("file_name")
-yaml_key = os.getenv("yaml_key") # spec.template.spec.image.containers.0.image
-yaml_value = os.getenv("yaml_value")
+FILE_PATH = os.environ("FILE_PATH")
+FILE_NAME = os.environ("FILE_NAME")
+YAML_KEY = os.environ("YAML_KEY") # spec.template.spec.image.containers.0.image
+YAML_VALUE = os.environ("YAML_VALUE")
 
-yaml_file = f"{file_path}/{file_name}"
+yaml_file = f"{FILE_PATH}/{FILE_NAME}"
 data = yaml.safe_load(open(yaml_file, "rb"))
 
 def get_updated_dict(dict_to_update, path, value):
@@ -21,6 +21,6 @@ def get_updated_dict(dict_to_update, path, value):
     obj[key_list[-1]] = value
 
 if __name__ == "__main__":
-    get_updated_dict(data,yaml_key,yaml_value)
+    get_updated_dict(data,YAML_KEY,YAML_VALUE)
     yaml.dump(data, open(yaml_file, "w"), default_flow_style=False)
     
