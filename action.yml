@@ -21,9 +21,9 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  # args:
-  #   - ${{ inputs.file_path }}
-  #   # - ${{ inputs.file_name }}
-  #   - ${{ inputs.yaml_key }}
-  #   - ${{ inputs.yaml_value }}
+  args:
+    - ${{ inputs.file_path }}
+    # - ${{ inputs.file_name }}
+    - ${{ inputs.yaml_key }}
+    - ${{ inputs.yaml_value }}
 
