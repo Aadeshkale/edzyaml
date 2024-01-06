@@ -4,7 +4,7 @@ description: 'A github action to pass values to yaml file'
 inputs:
   file_path:
     description: 'yaml file path'
-    required: true
+    required: false
   file_name:
     description: 'yaml file name'
     required: true
