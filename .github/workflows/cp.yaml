@@ -16,7 +16,6 @@ jobs:
         - name: File modify
           uses: ./
           with:
-            file_path: ""
             file_name: deployment.yaml
             yaml_key: image    
             yaml_value: welcome-app:asd45   
