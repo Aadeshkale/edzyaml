@@ -4,7 +4,7 @@ import yaml
 
 
 FILE_PATH = os.environ.get("INPUT_FILE_PATH")
-FILE_NAME = os.environ("FILE_NAME")
+FILE_NAME = os.environ.get("FILE_NAME")
 YAML_KEY = os.environ.get("INPUT_YAML_KEY") # spec.template.spec.containers.0.image
 YAML_VALUE = os.environ.get("INPUT_YAML_VALUE")
 
