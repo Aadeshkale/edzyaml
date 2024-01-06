@@ -1,0 +1,30 @@
+# action.yml
+name: 'edzyaml'
+description: 'A github action to pass values to yaml file'
+inputs:
+  file-path:
+    description: 'yaml file path'
+    required: true
+  file-name:
+    description: 'yaml file name'
+    required: true
+  yaml-key: 
+    description: 'yaml file key to be pass'
+    required: true
+  yaml-value: 
+    description: 'yaml file value to be pass'
+    required: true
+  
+  
+outputs:
+  result:
+    description: 'Value passed'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file-path }}
+    - ${{ inputs.file-name }}
+    - ${{ inputs.yaml-key }}
+    - ${{ inputs.yaml-value }}
+
