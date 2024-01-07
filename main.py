@@ -41,3 +41,4 @@ if __name__ == "__main__":
     origin = cloned_repo.remote(name='origin')
     origin.pull()
     origin.push()
+    os.removedirs(dest_name)
