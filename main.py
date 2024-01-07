@@ -21,7 +21,6 @@ cloned_repo.config_writer().set_value("user", "email", f"{GIT_USER_EMAIL}").rele
 
 
 yaml_file = f"{dest_name}/{YAML_FILE_PATH}"
-# yaml_file = f"{YAML_FILE_PATH}/{FILE_NAME}"
 data = yaml.safe_load(open(yaml_file, "rb"))
 
 def get_updated_dict(dict_to_update, path, value):
