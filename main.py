@@ -18,7 +18,8 @@ https_url=f"https://{GIT_USERNAME}:{GIT_TOKEN}@github.com/{GIT_REPO}"
 dest_name = GIT_REPO
 cloned_repo = Repo.clone_from(https_url, dest_name)
 
-
+cloned_repo.config_writer().set_value("user", "name", f"{GIT_USERNAME}").release()
+cloned_repo.config_writer().set_value("user", "email", "committer@example.com").release()
 
 
 yaml_file = f"{dest_name}/{YAML_FILE_PATH}"
