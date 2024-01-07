@@ -13,13 +13,9 @@ GIT_REPO = os.environ.get("INPUT_GIT_REPO")
 GIT_USER_EMAIL = os.environ.get("INPUT_GIT_USER_EMAIL") 
 
 # os.environ.setdefault('GIT_PYTHON_REFRESH','quiet')
-
-https_url=f"https://{GIT_USERNAME}:{GIT_TOKEN}@github.com/{GIT_REPO}"
 dest_name = GIT_REPO
-cloned_repo = Repo.clone_from(https_url, dest_name)
 
-cloned_repo.config_writer().set_value("user", "name", f"{GIT_USERNAME}").release()
-cloned_repo.config_writer().set_value("user", "email", f"{GIT_USER_EMAIL}").release()
+
 
 
 yaml_file = f"{dest_name}/{YAML_FILE_PATH}"
@@ -38,6 +34,12 @@ def get_updated_dict(dict_to_update, path, value):
 if __name__ == "__main__":
     get_updated_dict(data,YAML_KEY_PATH,YAML_VALUE)
     yaml.dump(data, open(yaml_file, "w"), default_flow_style=False)
+
+    https_url=f"https://{GIT_USERNAME}:{GIT_TOKEN}@github.com/{GIT_REPO}"
+    cloned_repo = Repo.clone_from(https_url, dest_name)
+    cloned_repo.config_writer().set_value("user", "name", f"{GIT_USERNAME}").release()
+    cloned_repo.config_writer().set_value("user", "email", f"{GIT_USER_EMAIL}").release()
+
     cloned_repo.git.add('--all')
     cloned_repo.git.commit('-m', f'edzyaml has updated {YAML_VALUE} in yaml', author=f'{GIT_USERNAME}')
     origin = cloned_repo.remote(name='origin')
