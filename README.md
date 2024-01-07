@@ -22,8 +22,9 @@ How to use ?
 
 * yaml_key_path: A complete path to yaml sperated by '.' key needs to pass value
   example,'spec.template.spec.containers.0.image'    
-    Note:- *  If you have list of object then you need to specify index no i.e 0,1,2...
-           *  Till 9 occurance it will support
-           *  If you passing same value for update it will show exception i.e Everything up to date
+    
+    * If you have list of object then you need to specify index no i.e 0,1,2...
+    * Till 9 occurance it will support
+    *  If you passing same value for update it will show exception i.e Everything up to date
 
 yaml_value: Value you want to pass  
