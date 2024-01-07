@@ -5,7 +5,17 @@ A github action to pass values to a remote github repo yaml file ( Mostly useful
 ----
 How to use ?
 
-
+```yaml
+  uses: Aadeshkale/edzyaml@main
+  with:
+    git_username: Aadeshkale
+    git_user_email: aadesh****595@gmail.com
+    git_repo: Aadeshkale/kube-cd
+    git_token: ${{ secrets.git_token }}
+    yaml_file_path: deployment.yaml
+    yaml_key_path: 'spec.template.spec.containers.0.image'    
+    yaml_value: welcome-app:asdf-tg
+```
 
 
 
