@@ -10,6 +10,7 @@ YAML_VALUE = os.environ.get("INPUT_YAML_VALUE")
 GIT_USERNAME = os.environ.get("INPUT_GIT_USERNAME")
 GIT_TOKEN = os.environ.get("INPUT_GIT_TOKEN") 
 GIT_REPO = os.environ.get("INPUT_GIT_REPO") 
+GIT_USER_EMAIL = os.environ.get("INPUT_GIT_USER_EMAIL") 
 
 os.environ.setdefault('GIT_PYTHON_REFRESH','quiet')
 
@@ -37,6 +38,6 @@ if __name__ == "__main__":
     get_updated_dict(data,YAML_KEY_PATH,YAML_VALUE)
     yaml.dump(data, open(yaml_file, "w"), default_flow_style=False)
     cloned_repo.git.add('--all')
-    cloned_repo.git.commit('-m', f'edzyaml has updated {YAML_VALUE} in yaml', author=f'{GIT_USERNAME}')
+    cloned_repo.git.commit('-m', f'edzyaml has updated {YAML_VALUE} in yaml', author=f'{GIT_USER_EMAIL}')
     origin = cloned_repo.remote(name='origin')
     origin.push()

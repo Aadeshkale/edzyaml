@@ -17,6 +17,8 @@ jobs:
           with:
             
             git_username: Aadeshkale
+            git_user_email: aadeshkale.6565@gmail.com
+            
             git_repo: Aadeshkale/kube-cd
             git_token: ${{ secrets.py_token }}
             yaml_file_path: deployment.yaml
