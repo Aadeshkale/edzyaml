@@ -11,6 +11,7 @@ GIT_USERNAME = os.environ.get("INPUT_GIT_USERNAME")
 GIT_TOKEN = os.environ.get("INPUT_GIT_TOKEN") 
 GIT_REPO = os.environ.get("INPUT_GIT_REPO") 
 
+os.environ.setdefault('GIT_PYTHON_REFRESH','quiet'ss)
 
 https_url=f"https://{GIT_USERNAME}:{GIT_TOKEN}@github.com/{GIT_REPO}"
 dest_name = GIT_REPO
