@@ -6,6 +6,10 @@ inputs:
     description: 'github username'
     required: true
   
+  git_user_email:
+    description: 'github user email'
+    required: true
+  
   git_token:
     description: 'github personal access token'
     required: true
