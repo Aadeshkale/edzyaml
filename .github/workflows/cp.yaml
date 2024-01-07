@@ -23,11 +23,4 @@ jobs:
             git_token: ${{ secrets.py_token }}
             yaml_file_path: deployment.yaml
             yaml_key_path: 'spec.template.spec.containers.0.image'    
-            yaml_value: welcome-app:6261-AD   
-        
-        - name: result check
-          run: |
-            echo "welcome to the gitaction world :)"
-            pwd
-            ls -la    
-            cat test.yaml    
+            yaml_value: welcome-app:6262-AD   
