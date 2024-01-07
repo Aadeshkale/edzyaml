@@ -8,15 +8,19 @@ jobs:
     build:
         name: Custom action  
         runs-on: ubuntu-latest  
+        environment: dev
         steps:
         - uses: actions/checkout@v3
        
         - name: File modify
           uses: ./
           with:
-            file_path: "./"
-            file_name: test.yaml
-            yaml_key: 'spec.template.spec.containers.0.image'    
+            
+            git_username: Aadeshkale
+            git_repo: Aadeshkale/kube-cd
+            git_token: ${{ secrets.py_token }}
+            file_path: deployment.yaml
+            yaml_key_path: 'spec.template.spec.containers.0.image'    
             yaml_value: welcome-app:asd45   
         
         - name: result check
