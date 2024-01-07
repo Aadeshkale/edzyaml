@@ -13,7 +13,7 @@ from git import Repo
 
 YAML_FILE_PATH = 'deployment.yaml'
 YAML_KEY_PATH = 'spec.template.spec.containers.0.image'
-YAML_VALUE = 'notespro:15'
+YAML_VALUE = 'notespro:145'
 
 GIT_USERNAME = 'Aadeshkale'
 GIT_TOKEN = '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' 
