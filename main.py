@@ -40,4 +40,5 @@ if __name__ == "__main__":
     cloned_repo.git.commit('-m', f'edzyaml has updated {YAML_VALUE} in yaml', author=f'{GIT_USERNAME}')
     origin = cloned_repo.remote(name='origin')
     origin.pull()
-    origin.push()
+    os.system("git push")
+    # origin.push()
