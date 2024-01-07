@@ -3,7 +3,7 @@ A github action to pass values to a remote github repo yaml file ( Mostly useful
 
 
 ----
-How to use ?
+# How to use ?
 
 ```yaml
   uses: Aadeshkale/edzyaml@main
@@ -17,7 +17,7 @@ How to use ?
     yaml_value: welcome-app:asdf-tg
 ```
 
-
+# Variable discription
 
 
 * git_username :- Username of github repo
