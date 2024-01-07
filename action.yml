@@ -1,29 +1,39 @@
 name: 'edzyaml'
 description: 'A github action to pass values to yaml file'
 inputs:
-  file_path:
-    description: 'yaml file path'
+  
+  git_username:
+    description: 'github username'
+    required: true
+  
+  git_token:
+    description: 'github personal access token'
+    required: true
+  
+  git_repo:
+    description: 'github remote repo where you want to update yaml file'
+    required: true
+  
+  yaml_file_path:
+    description: 'yaml file path '
     required: true
   # file_name:
   #   description: 'yaml file name'
   #   required: true
-  yaml_key: 
-    description: 'yaml file key to be pass'
-    required: true
-  yaml_value: 
-    description: 'yaml file value to be pass'
+  yaml_key_path: 
+    description: 'yaml file key example, spec.template.spec.containers.0.image '
     required: true
   
+  yaml_value: 
+    description: 'yaml file new value to be pass to yaml key path'
+    required: true
+ 
   
 outputs:
   result:
-    description: 'Value passed'
+    description: 'value changed to remote repo yaml'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  # args:
-  #   - ${{ inputs.file_path }}
-  #   # - ${{ inputs.file_name }}
-  #   - ${{ inputs.yaml_key }}
-  #   - ${{ inputs.yaml_value }}
+
 
