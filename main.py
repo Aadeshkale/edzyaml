@@ -2,17 +2,23 @@ import os
 import yaml
 from git import Repo
 
-YAML_FILE_PATH = os.environ.get("INPUT_YAML_FILE_PATH")
-# FILE_NAME = os.environ.get("INPUT_FILE_NAME")
-YAML_KEY_PATH = os.environ.get("INPUT_YAML_KEY_PATH") # spec.template.spec.containers.0.image
-YAML_VALUE = os.environ.get("INPUT_YAML_VALUE")
+# YAML_FILE_PATH = os.environ.get("INPUT_YAML_FILE_PATH")
+# YAML_KEY_PATH = os.environ.get("INPUT_YAML_KEY_PATH") # spec.template.spec.containers.0.image
+# YAML_VALUE = os.environ.get("INPUT_YAML_VALUE")
 
-GIT_USERNAME = os.environ.get("INPUT_GIT_USERNAME")
-GIT_TOKEN = os.environ.get("INPUT_GIT_TOKEN") 
-GIT_REPO = os.environ.get("INPUT_GIT_REPO") 
-GIT_USER_EMAIL = os.environ.get("INPUT_GIT_USER_EMAIL") 
+# GIT_USERNAME = os.environ.get("INPUT_GIT_USERNAME")
+# GIT_TOKEN = os.environ.get("INPUT_GIT_TOKEN") 
+# GIT_REPO = os.environ.get("INPUT_GIT_REPO") 
+# GIT_USER_EMAIL = os.environ.get("INPUT_GIT_USER_EMAIL") 
 
-# os.environ.setdefault('GIT_PYTHON_REFRESH','quiet')
+YAML_FILE_PATH = 'deployment.yaml'
+YAML_KEY_PATH = 'spec.template.spec.containers.0.image'
+YAML_VALUE = 'notespro:15'
+
+GIT_USERNAME = 'Aadeshkale'
+GIT_TOKEN = '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' 
+GIT_REPO = 'Aadeshkale/kube-cd'
+GIT_USER_EMAIL = 'someuser@gmail.com'
 
 https_url=f"https://{GIT_USERNAME}:{GIT_TOKEN}@github.com/{GIT_REPO}"
 dest_name = GIT_REPO
