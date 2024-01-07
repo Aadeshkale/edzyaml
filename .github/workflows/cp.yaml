@@ -19,7 +19,7 @@ jobs:
             git_username: Aadeshkale
             git_repo: Aadeshkale/kube-cd
             git_token: ${{ secrets.py_token }}
-            file_path: deployment.yaml
+            yaml_file_path: deployment.yaml
             yaml_key_path: 'spec.template.spec.containers.0.image'    
             yaml_value: welcome-app:asd45   
         
