@@ -17,7 +17,7 @@ jobs:
           with:
             
             git_username: Aadeshkale
-            git_user_email: bob@example.com
+            git_user_email: aadeshkale619@gmail.com
             
             git_repo: Aadeshkale/kube-cd
             git_token: ${{ secrets.py_token }}
