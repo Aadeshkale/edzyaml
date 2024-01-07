@@ -34,7 +34,9 @@ Variable discription
   * yaml_value:-            Value you want to pass  
  ```
 Screenhots
-![using_custom_action](https://github.com/Aadeshkale/edzyaml/assets/40000735/8e1f82ed-4aad-4956-b4b0-a16592789548)
+
+
+* ![using_custom_action](https://github.com/Aadeshkale/edzyaml/assets/40000735/8e1f82ed-4aad-4956-b4b0-a16592789548)
 
 
 
