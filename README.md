@@ -35,8 +35,10 @@ Variable discription
  ```
 Screenhots
 
-
-* ![using_custom_action](https://github.com/Aadeshkale/edzyaml/assets/40000735/8e1f82ed-4aad-4956-b4b0-a16592789548)
-
+![using_custom_action](https://github.com/Aadeshkale/edzyaml/assets/40000735/8e1f82ed-4aad-4956-b4b0-a16592789548)
 
 
+![op](https://github.com/Aadeshkale/edzyaml/assets/40000735/47b705b1-15de-48d5-8bd5-a497d068f810)
+
+
+![yaml_file](https://github.com/Aadeshkale/edzyaml/assets/40000735/591ed9b2-2939-493c-a145-8b1094f147be)
