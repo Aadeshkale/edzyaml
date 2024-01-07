@@ -1,6 +1,7 @@
 import os
 import yaml
 from git import Repo
+import shutil
 
 YAML_FILE_PATH = os.environ.get("INPUT_YAML_FILE_PATH")
 YAML_KEY_PATH = os.environ.get("INPUT_YAML_KEY_PATH") # spec.template.spec.containers.0.image
@@ -40,4 +41,4 @@ if __name__ == "__main__":
     origin = cloned_repo.remote(name='origin')
     origin.pull()
     origin.push()
-    os.removedirs(dest_name)
+    shutil.rmtree(dest_name)
