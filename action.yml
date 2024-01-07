@@ -4,9 +4,9 @@ inputs:
   file_path:
     description: 'yaml file path'
     required: true
-  file_name:
-    description: 'yaml file name'
-    required: true
+  # file_name:
+  #   description: 'yaml file name'
+  #   required: true
   yaml_key: 
     description: 'yaml file key to be pass'
     required: true
