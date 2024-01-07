@@ -36,8 +36,8 @@ def get_updated_dict(dict_to_update, path, value):
 if __name__ == "__main__":
     get_updated_dict(data,YAML_KEY_PATH,YAML_VALUE)
     yaml.dump(data, open(yaml_file, "w"), default_flow_style=False)
-    cloned_repo.git.pull()
     cloned_repo.git.add('--all')
     cloned_repo.git.commit('-m', f'edzyaml has updated {YAML_VALUE} in yaml', author=f'{GIT_USERNAME}')
     origin = cloned_repo.remote(name='origin')
+    origin.pull()
     origin.push()
