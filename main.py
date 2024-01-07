@@ -40,5 +40,6 @@ if __name__ == "__main__":
     yaml.dump(data, open(yaml_file, "w"), default_flow_style=False)
     cloned_repo.git.add('--all')
     cloned_repo.git.commit('-m', f'edzyaml has updated {YAML_VALUE} in yaml', author=f'{GIT_USERNAME}')
-    origin = cloned_repo.remote(name='origin')
+    cloned_repo.git.push
+    origin = cloned_repo.remote(name='main')
     origin.push()
