@@ -42,3 +42,10 @@ Screenhots
 
 
 ![yaml_file](https://github.com/Aadeshkale/edzyaml/assets/40000735/591ed9b2-2939-493c-a145-8b1094f147be)
+
+
+
+if you passing same value for update it will show exception i.e Everything up to date
+
+
+![exception](https://github.com/Aadeshkale/edzyaml/assets/40000735/92cf2da3-08ca-46a5-b910-0c0aba9b5f3e)
